@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'Portfolio/css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'Portfolio/css/index.css' %}">
+    {% block css %}
+    {% endblock %}
     <link rel="stylesheet" href="{% static 'fonts\Satoshi_Complete\Fonts\WEB\css\satoshi.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,10 +22,11 @@
         <div class="nav-cont">
             <div class="nav-main">
                 <a class="logo" href="https://www.kushmalwatkar.com"><img src="{% static 'Portfolio/images/logos/logo4.png' %}" alt=""></a>
-                <a class="nav-btn" href="#">About</a>
-                <a class="nav-btn" href="#projects">Projects</a>    
-                <a class="nav-btn" href="#experience">Resume</a>    
-                <a class="nav-btn" href="#contact">Contact</a>  
+                <a class="nav-btn" href="/">Home</a>                
+                <a class="nav-btn" href="/about">About</a>
+                <a class="nav-btn" href="/projects">Projects</a>    
+                <a class="nav-btn" href="/experience">Resume</a>    
+                <a class="nav-btn" href="/contact">Contact</a>  
             </div>
         </div>
     </div>

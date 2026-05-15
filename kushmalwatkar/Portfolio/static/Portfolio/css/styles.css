@@ -49,6 +49,13 @@ body::-webkit-scrollbar-thumb:hover
 {
     color: var(--accent);
 }
+h1
+{
+    font-family: "Satoshi-Bold";
+    margin: 0px;
+    padding-bottom: 10px;
+    font-size: 2.5em;
+}
 h2
 {
     font-family: "Satoshi-Bold";
@@ -65,10 +72,10 @@ h3
 
 .cont
 {
-    width: 94%;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 60px;
+    width: 90%;
+    padding: 5%;
+    padding-right: 5%;
+    padding-top: 100px;
 }
 
 /* Nav */
@@ -80,7 +87,8 @@ h3
     background-color: var(--background);
     flex-direction: row;
     z-index: 10;
-    margin: 3%;
+    margin: 5%;
+    margin-top: 30px;
     height: 50px;
     background-color: rgba(10, 10, 10, 0.5);
     backdrop-filter: blur(10px);
