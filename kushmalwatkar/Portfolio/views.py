@@ -11,6 +11,9 @@ def about(request):
 def projects(request):
     return render(request, "projects.html")
 
+def project(request, project_name):
+    return render(request, "project.html", {"project_name": project_name})
+
 def experience(request):
     return render(request, "experience.html")
 
