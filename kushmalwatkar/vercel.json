@@ -1,22 +1,18 @@
 {
-    "builds": [
-        {
-            "src": "kushmalwatkar/wsgi.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLambdaSize": "15mb",
-                "runtime": "python3.9"
-            }
-        },
-        {
-            "src": "manage.py",
-            "use": "@vercel/python"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "kushmalwatkar/wsgi.py"
-        }
-    ]
+  "builds": [
+    {
+      "src": "kushmalwatkar/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "(.*)",
+      "dest": "kushmalwatkar/wsgi.py"
+    }
+  ]
 }
