@@ -1,0 +1,118 @@
+/* Main */
+:root {
+	--background: #0a0a0a;
+	--text: #bababa;
+    --header: #f0f0f0;
+    --border: rgb(74, 74, 74);
+    --accent: #22d3ee;
+}
+*
+{
+    transition: 0.3s ease;
+}
+body, html
+{
+    height: 100% !important;
+    width: 100% !important;
+    background-color: var(--background);
+    padding: 0px;
+    margin: 0px;
+    color: var(--text);
+    letter-spacing: 0.03em;
+    font-family: "IBM Plex Mono";
+    line-height: 1.5;
+    font-size: 16px;
+}
+body::-webkit-scrollbar
+{
+    background-color: transparent;
+    width: 5px;
+}
+body::-webkit-scrollbar-button
+{
+    display: none;
+}
+body::-webkit-scrollbar-thumb
+{
+    transition: 0.3s ease;
+    background-color: var(--border);
+    border-radius: 20px;
+    width: 10px;
+    cursor: ns-resize;
+}
+body::-webkit-scrollbar-thumb:hover
+{
+    transition: 0.3s ease;
+    background-color: var(--text);
+}
+.accent
+{
+    color: var(--accent);
+}
+
+.cont
+{
+    width: 90%;
+    height: 100vh;
+    padding: 5%;
+    padding-right: 5%;
+    padding-top: 100px;
+}
+
+/* Nav */
+.nav
+{
+    display: flex;
+    position: fixed;
+    border-radius: 50px;
+    background-color: var(--background);
+    flex-direction: row;
+    z-index: 10;
+    margin: 5%;
+    margin-top: 30px;
+    height: 50px;
+    background-color: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(10, 10, 10, 0.7);
+}
+.nav-cont
+{
+    width: 100%;
+    margin-left: 10px;
+    text-align: right;
+}
+.nav-main
+{
+    display: flex;
+    height: 50px;
+    position: relative;
+    right: 0px;
+    float: right;
+    width: fit-content;
+    z-index: 3;
+}
+.nav-btn
+{
+    font-family: "IBM Plex Mono";
+    transition: 0.3s ease;
+    text-align: center;
+    padding: 13px 16px;
+    height: 50px;
+    height: fit-content;
+    color: var(--text);
+}
+.nav-btn:hover
+{
+    transition: 0.3s ease;
+    color: var(--accent);
+}
+.logo
+{
+    text-align: left;
+    height: 50px;
+}
+.logo img
+{
+    width: 50px;
+    border-radius: 50%;
+}
