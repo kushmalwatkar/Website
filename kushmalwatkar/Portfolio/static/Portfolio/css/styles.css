@@ -49,30 +49,11 @@ body::-webkit-scrollbar-thumb:hover
 {
     color: var(--accent);
 }
-h1
-{
-    font-family: "Satoshi-Bold";
-    margin: 0px;
-    padding-bottom: 10px;
-    font-size: 2.5em;
-}
-h2
-{
-    font-family: "Satoshi-Bold";
-    margin: 0px;
-    padding-bottom: 20px;
-    font-size: 1.75em;
-}
-h3
-{
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 1.25em;
-}
 
 .cont
 {
     width: 90%;
+    height: 100vh;
     padding: 5%;
     padding-right: 5%;
     padding-top: 100px;

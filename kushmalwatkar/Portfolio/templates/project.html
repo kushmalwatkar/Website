@@ -1,10 +1,38 @@
 {% extends "layout.html" %}
 {% load static %}
 
-{% block title %}Kush Malwatkar{% endblock %}
+{% block title %}{{project.name}}{% endblock %}
 
 {% block css %}
     <link rel="stylesheet" href="{% static 'Portfolio/css/project.css' %}">
 {% endblock %}
 
 {% block content %} 
+    <div id="project-page">
+        <div class="p-content">
+            <div class="p-main">
+                <div class="p-title">{{project.name}}</div>
+                <div class="p-tag">{{project.tag}}</div>
+                <div class="p-description">{{project.description}}</div>
+                <br>
+                <h3>Skills Used</h3>
+                <div class="p-skills">
+                    {% for skill in project.skills %}
+                        <div class="p-skill">{{skill}}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="p-links">
+                    {% for link in project.links %}
+                        <a class="p-link" href="{{link.url}}">{{link.name}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="p-img-cont">
+                {% for image in project.images %}
+                    <div class="p-img" style="background-image: url('{% static image.url %}');">{{image.caption}}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

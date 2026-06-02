@@ -80,6 +80,34 @@ DATABASES = {
     }
 }
 
+PORTFOLIO_PROJECTS = [
+    {
+        "name": "US Weather Map",
+        "web-name": "us-weather-map",
+        "tag": "embedded / hardware",
+        "description": "100 RGB LEDs displaying live weather conditions, temperature, precipitation, air quality, and wind speed using an API.",
+        "images": [
+            {"url": "Portfolio/images/UWM/UWM5.jpeg", "caption": "Hurricane Ida (2021)"},
+            {"url": "Portfolio/images/UWM/UWM1.JPG", "caption": "Installing LEDs"},
+            {"url": "Portfolio/images/UWM/UWM2.JPG", "caption": "Box construction with LED's numbers"},
+            {"url": "Portfolio/images/UWM/UWM3.JPG", "caption": "Cloud cover testing"},
+        ],
+        "show_skills": ["ESP32", "C++", "API Integration"],
+        "skills": ["ESP32", "C++", "API Integration", "Wiring", "LED Control"],
+        "learn_more": "/project/us-weather-map/",
+        "links": [
+            {
+                "name": "YouTube",
+                "url": "#"
+            },
+            {
+                "name": "GitHub",
+                "url": "#"
+            }
+        ]
+    },
+]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators

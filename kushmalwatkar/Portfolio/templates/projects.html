@@ -12,6 +12,33 @@
         <p>Click on a project to learn more!</p>
         <div id="projects">
             <div class="card-deck">
+                {% for project in projects %}
+                    <a href="{{ project.learn_more }}" class="project"> <!--UWM-->
+                        <div class="p-img-cont">
+                            {% for image in project.images %}
+                                <div class="p-img" style="background-image: url('{% static image.url %}');">{{image.caption}}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="p-main">    
+                            <div class="p-head">{{project.name}}</div>
+                            <div class="p-type">{{project.tag}}</div>
+                            <div class="p-body">{{project.description}}</div>
+                        </div>
+                        <div class="p-skills">
+                            {% for skill in project.show_skills %}
+                                <div class="p-skill">{{skill}}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="p-links">
+                            {% for link in project.links %}
+                                <a class="p-link" href="{{link.url}}">{{link.name}}</a>
+                            {% endfor %}
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+            <hr>
+            <div class="card-deck">
                 <div class="project"> <!--UWM-->
                     <div class="p-img-cont">
                         <div class="p-img" style="background-image: url({% static 'Portfolio/images/UWM/UWM5.jpeg' %});">Hurricane Ida (2021) | Scroll →</div>
